@@ -28,6 +28,7 @@ class GracefulShutdownGuard(IGracefulShutdownGuard):
         )
         while True:
             active = self._manager.active_connection_count
+            logger.info(f"Active connections: {active}")
             now = datetime.now(timezone.utc)
             remaining = max((deadline - now).total_seconds(), 0)
             if active == 0:

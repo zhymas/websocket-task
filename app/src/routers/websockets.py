@@ -38,4 +38,3 @@ async def websocket_endpoint(
         await manager.disconnect(client.id)
     except Exception:
         await manager.disconnect(client.id)
-        raise

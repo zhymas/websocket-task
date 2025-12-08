@@ -1,6 +1,7 @@
 from dataclasses import dataclass
-from fastapi.websockets import WebSocket
 from datetime import datetime
+
+from fastapi.websockets import WebSocket
 
 
 @dataclass(slots=True)
