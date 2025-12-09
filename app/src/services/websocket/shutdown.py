@@ -31,6 +31,7 @@ class GracefulShutdownGuard(IGracefulShutdownGuard):
             logger.info(f"Active connections: {active}")
             now = datetime.now(timezone.utc)
             remaining = max((deadline - now).total_seconds(), 0)
+            logger.info(f"Remaining time: {remaining}")
             if active == 0:
                 logger.info(
                     f"All WebSocket connections drained after {((now - start).total_seconds())} seconds."
